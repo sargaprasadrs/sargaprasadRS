@@ -1,16 +1,50 @@
-## Hi there 👋
+# Hi, I'm Sargaprasad R S
 
-<!--
-**sargaprasadrs/sargaprasadRS** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Information Technology Graduate
 
-Here are some ideas to get you started:
+Building full-stack applications, AI-powered systems, backend APIs, and real-time software solutions.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Tech Stack
+
+### Languages
+Python • TypeScript • JavaScript • SQL • C++
+
+### Frontend
+React • Next.js • Tailwind CSS
+
+### Backend
+FastAPI • Flask • REST APIs
+
+### Database
+PostgreSQL • SQLite
+
+### AI/ML
+Gemini API • Ollama • OCR Pipelines • LLM Integration
+
+## Featured Projects
+
+### OperaiQ
+Enterprise AI platform for manufacturing intelligence.
+
+Tech:
+Next.js • FastAPI • PostgreSQL • Gemini • OCR
+
+### BlindNav
+Accessibility-focused navigation platform for visually impaired users.
+
+Tech:
+React • Flask • GPS • Raspberry Pi
+
+### Forensic Sketch
+AI-powered facial reconstruction platform.
+
+Tech:
+React • Python • Ollama • Hugging Face
+
+## Connect
+
+Portfolio: https://sargaprasadrs.netlify.app/
+
+LinkedIn: sargaprasadrs
+
+Email: sargaprasadrs@gmail.com
