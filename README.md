@@ -45,6 +45,6 @@ React • Python • Ollama • Hugging Face
 
 Portfolio: https://sargaprasadrs.netlify.app/
 
-LinkedIn: https://www.linkedin.com/sargaprasadrs
+LinkedIn: https://www.linkedin.com/in/sargaprasadrs
 
 Email: sargaprasadrs@gmail.com
