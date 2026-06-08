@@ -1,50 +1,93 @@
-# Hi, I'm Sargaprasad R S
+# Sargaprasad R S
 
-Information Technology Graduate
+Full-Stack Engineer | Software Developer
 
-Building full-stack applications, AI-powered systems, backend APIs, and real-time software solutions.
+Information Technology graduate focused on backend engineering, full-stack web applications, AI-powered systems, and scalable software solutions.
+
+---
+
+## About Me
+
+- B.Tech in Information Technology
+- Experience building full-stack applications, REST APIs, AI-integrated systems, and real-time software solutions
+- Strong interest in Software Engineering, Backend Development, System Design, and AI Engineering
+- Currently expanding expertise in enterprise backend systems and distributed architectures
+
+---
+
+## Connect
+
+[Portfolio](https://sargaprasadrs.netlify.app/) •
+[LinkedIn](https://linkedin.com/in/sargaprasadrs) •
+[Email](mailto:sargaprasadrs@gmail.com)
+
+---
 
 ## Tech Stack
 
 ### Languages
-Python • TypeScript • JavaScript • SQL • C++
+
+<p>
+<img src="https://skillicons.dev/icons?i=python,typescript,javascript,cpp" />
+</p>
 
 ### Frontend
-React • Next.js • Tailwind CSS
+
+<p>
+<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,html,css" />
+</p>
 
 ### Backend
-FastAPI • Flask • REST APIs
 
-### Database
-PostgreSQL • SQLite
+<p>
+<img src="https://skillicons.dev/icons?i=fastapi,flask,nodejs" />
+</p>
 
-### AI/ML
-Gemini API • Ollama • OCR Pipelines • LLM Integration
+### Databases
 
-## Featured Projects
+<p>
+<img src="https://skillicons.dev/icons?i=postgres,sqlite,firebase" />
+</p>
 
-### OperaiQ
-Enterprise AI platform for manufacturing intelligence.
+### Tools & Platforms
 
-Tech:
-Next.js • FastAPI • PostgreSQL • Gemini • OCR
+<p>
+<img src="https://skillicons.dev/icons?i=git,github,linux,docker,vscode" />
+</p>
 
-### BlindNav
-Accessibility-focused navigation platform for visually impaired users.
+### AI & Data
 
-Tech:
-React • Flask • GPS • Raspberry Pi
+Gemini API • Ollama • Hugging Face • OCR Pipelines • LLM Integration
 
-### Forensic Sketch
-AI-powered facial reconstruction platform.
+---
 
-Tech:
-React • Python • Ollama • Hugging Face
+## Engineering Focus
 
-## Connect
+- Backend Engineering
+- REST API Development
+- Full-Stack Web Applications
+- AI-Powered Systems
+- Database Design
+- System Design
+- Real-Time Applications
+- Accessibility Technology
 
-Portfolio: https://sargaprasadrs.netlify.app/
+---
 
-LinkedIn: https://www.linkedin.com/in/sargaprasadrs
+## GitHub Stats
 
-Email: sargaprasadrs@gmail.com
+<p>
+  <img src="https://github-readme-stats.vercel.app/api?username=sargaprasadrs&show_icons=true&hide_border=true" />
+</p>
+
+<p>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=sargaprasadrs&hide_border=true" />
+</p>
+
+<p>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sargaprasadrs&layout=compact&hide_border=true" />
+</p>
+
+---
+
+Building reliable software with a focus on scalability, maintainability, and practical impact.
