@@ -2,7 +2,7 @@
 
 Full-Stack Engineer | Software Developer
 
-Information Technology graduate focused on backend engineering, full-stack web applications, AI-powered systems, and scalable software solutions.
+Information Technology graduate focused on building scalable web applications, backend systems, AI-powered solutions, and real-time software.
 
 ---
 
@@ -11,7 +11,7 @@ Information Technology graduate focused on backend engineering, full-stack web a
 - B.Tech in Information Technology
 - Experience building full-stack applications, REST APIs, AI-integrated systems, and real-time software solutions
 - Strong interest in Software Engineering, Backend Development, System Design, and AI Engineering
-- Currently expanding expertise in enterprise backend systems and distributed architectures
+- Focused on writing maintainable, scalable, and production-ready software
 
 ---
 
@@ -28,31 +28,31 @@ Information Technology graduate focused on backend engineering, full-stack web a
 ### Languages
 
 <p>
-<img src="https://skillicons.dev/icons?i=python,typescript,javascript,cpp" />
+  <img src="https://skillicons.dev/icons?i=python,typescript,javascript,cpp" />
 </p>
 
 ### Frontend
 
 <p>
-<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,html,css" />
+  <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,html,css" />
 </p>
 
 ### Backend
 
 <p>
-<img src="https://skillicons.dev/icons?i=fastapi,flask,nodejs" />
+  <img src="https://skillicons.dev/icons?i=fastapi,flask,nodejs" />
 </p>
 
 ### Databases
 
 <p>
-<img src="https://skillicons.dev/icons?i=postgres,sqlite,firebase" />
+  <img src="https://skillicons.dev/icons?i=postgres,sqlite,firebase" />
 </p>
 
 ### Tools & Platforms
 
 <p>
-<img src="https://skillicons.dev/icons?i=git,github,linux,docker,vscode" />
+  <img src="https://skillicons.dev/icons?i=git,github,linux,docker,vscode" />
 </p>
 
 ### AI & Data
@@ -74,18 +74,26 @@ Gemini API • Ollama • Hugging Face • OCR Pipelines • LLM Integration
 
 ---
 
-## GitHub Stats
+## GitHub Activity
 
-<p>
-  <img src="https://github-readme-stats.vercel.app/api?username=sargaprasadrs&show_icons=true&hide_border=true" />
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=sargaprasadrs&hide_border=true" alt="GitHub Streak" />
 </p>
 
-<p>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=sargaprasadrs&hide_border=true" />
+---
+
+## GitHub Achievements
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=sargaprasadrs&no-frame=true&margin-w=10&margin-h=10" alt="GitHub Trophies" />
 </p>
 
+---
+
+## Featured Technologies
+
 <p>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sargaprasadrs&layout=compact&hide_border=true" />
+  <img src="https://skillicons.dev/icons?i=python,react,nextjs,fastapi,flask,postgres,sqlite,git,github,docker,linux" />
 </p>
 
 ---
