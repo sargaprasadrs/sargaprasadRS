@@ -82,13 +82,6 @@ Gemini API • Ollama • Hugging Face • OCR Pipelines • LLM Integration
 
 ---
 
-## GitHub Achievements
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sargaprasadrs&no-frame=true&margin-w=10&margin-h=10" alt="GitHub Trophies" />
-</p>
-
----
 
 ## Featured Technologies
 
