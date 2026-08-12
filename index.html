@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GitHub Profile Pet — Tamagotchi for Your Profile</title>
+<meta name="description" content="A retro pixel dragon Tamagotchi powered by your live GitHub GraphQL data. Feed it commits, keep the streak alive, watch it evolve." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%238b5cf6'/><rect x='10' y='10' width='44' height='44' fill='%23a78bfa'/><text x='32' y='42' font-size='26' text-anchor='middle' fill='%2317132f' font-family='monospace' font-weight='bold'>GH</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- CRT scanline / vignette overlays -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="topbar">
+    <div class="logo">
+      <h1>GITHUB&nbsp;PET</h1>
+      <span class="logo-sub">v1.0 · GRAPHQL-POWERED</span>
+    </div>
+    <div class="topbar-right">
+      <div class="leds" id="leds">
+        <span class="led" id="led-api" data-label="API" title="GitHub API status"><i></i>API</span>
+        <span class="led" id="led-mode" data-label="MODE" title="Auth mode"><i></i>MODE</span>
+      </div>
+      <button class="btn btn-icon" id="btn-sound" title="Toggle sound">SND</button>
+      <button class="btn btn-icon" id="btn-settings" title="Settings">SET</button>
+    </div>
+  </header>
+
+  <!-- ============ MAIN ============ -->
+  <main class="layout">
+
+    <!-- ===== PET STAGE ===== -->
+    <section class="panel pet-panel" id="pet-stage" aria-label="Pet stage">
+      <div class="speech-wrap">
+        <div class="speech" id="speech">BOOTING UP...</div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-glow" aria-hidden="true"></div>
+        <canvas id="pet-canvas" width="360" height="332"></canvas>
+        <div class="floor" aria-hidden="true"></div>
+      </div>
+
+      <div class="pet-hud">
+        <div class="pet-id">
+          <span class="pet-name" id="pet-name">SPARKY</span>
+          <span class="level-badge" id="level-badge" title="Evolution stage">L1 · EGG</span>
+        </div>
+        <div class="bars">
+          <div class="bar-row"><span class="bar-label">ENG</span><div class="bar"><div class="bar-fill bar-eng" id="bar-energy"></div></div><span class="bar-num" id="num-energy">50</span></div>
+          <div class="bar-row"><span class="bar-label">HAP</span><div class="bar"><div class="bar-fill bar-hap" id="bar-happiness"></div></div><span class="bar-num" id="num-happiness">50</span></div>
+          <div class="bar-row"><span class="bar-label">FUL</span><div class="bar"><div class="bar-fill bar-ful" id="bar-fullness"></div></div><span class="bar-num" id="num-fullness">50</span></div>
+          <div class="bar-row bar-xp-row"><span class="bar-label">XP</span><div class="bar"><div class="bar-fill bar-xp" id="bar-xp"></div></div><span class="bar-num" id="num-xp">0</span></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-action" id="btn-feed">FEED</button>
+        <button class="btn btn-action" id="btn-play">PLAY</button>
+        <button class="btn btn-action" id="btn-sleep">SLEEP</button>
+        <button class="btn btn-action" id="btn-refresh">DATA</button>
+      </div>
+      <p class="hint">TIP: CLICK THE DRAGON TO PET IT</p>
+    </section>
+
+    <!-- ===== DASHBOARD ===== -->
+    <aside class="panel dash-panel" aria-label="GitHub dashboard">
+      <div class="profile-card">
+        <img id="avatar" class="avatar" alt="GitHub avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232a2350'/%3E%3Ctext x='32' y='42' font-size='30' text-anchor='middle' fill='%23a78bfa' font-family='monospace'%3E%3F%3F%3F%3C/text%3E%3C/svg%3E" />
+        <div class="profile-text">
+          <div class="profile-name" id="profile-name">—</div>
+          <a class="profile-login" id="profile-login" href="#" target="_blank" rel="noopener">@loading</a>
+          <div class="profile-bio" id="profile-bio">…</div>
+        </div>
+      </div>
+
+      <div class="chips">
+        <div class="chip"><span class="chip-num" id="chip-contrib">–</span><span class="chip-label">COMMITS</span></div>
+        <div class="chip"><span class="chip-num" id="chip-streak">–</span><span class="chip-label">STREAK</span></div>
+        <div class="chip"><span class="chip-num" id="chip-stars">–</span><span class="chip-label">STARS</span></div>
+        <div class="chip"><span class="chip-num" id="chip-repos">–</span><span class="chip-label">REPOS</span></div>
+        <div class="chip"><span class="chip-num" id="chip-followers">–</span><span class="chip-label">FOLLOWERS</span></div>
+        <div class="chip"><span class="chip-num chip-langs" id="chip-langs">–</span><span class="chip-label">TOP LANG</span></div>
+      </div>
+
+      <div class="heat-section">
+        <div class="section-title">CONTRIBUTION MAP <span class="blink-cursor">|</span></div>
+        <div class="heat-legend"><span>LESS</span><i></i><i></i><i></i><i></i><i></i><span>MORE</span></div>
+        <canvas id="heatmap" width="280" height="196"></canvas>
+        <div class="heat-total">TOTAL: <b id="heat-total">–</b> CONTRIBUTIONS</div>
+      </div>
+
+      <div class="recent">
+        <div class="section-title">RECENT REPOS</div>
+        <ul id="repo-list" class="repo-list"><li class="dim">…</li></ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- ============ STATUS BAR ============ -->
+  <footer class="statusbar">
+    <div class="status-left"><span class="blink-cursor">|</span></div>
+    <div class="log" id="log"></div>
+    <div class="status-right" id="clock">--:--:--</div>
+  </footer>
+
+  <!-- ============ SETUP OVERLAY ============ -->
+  <div class="overlay" id="setup-overlay" hidden>
+    <div class="modal">
+      <div class="modal-title">CONNECT YOUR GITHUB</div>
+      <p class="modal-text">
+        THE PET FEEDS ON YOUR GITHUB GRAPHQL DATA.<br />
+        PICK A POWER SOURCE BELOW.
+      </p>
+
+      <div class="setup-options">
+        <button class="btn btn-option" id="btn-connect">CONNECT</button>
+        <button class="btn btn-option alt" id="btn-demo">DEMO MODE</button>
+      </div>
+
+      <div class="setup-form" id="setup-form" hidden>
+        <label class="field">
+          <span>GITHUB USERNAME</span>
+          <input id="setup-login" type="text" placeholder="sargaprasadrs" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span>PERSONAL ACCESS TOKEN <em>(OPTIONAL — SEE BELOW)</em></span>
+          <input id="setup-token" type="password" placeholder="ghp_..." autocomplete="off" />
+        </label>
+        <button class="btn btn-primary" id="btn-connect-go">START</button>
+      </div>
+
+      <details class="token-help">
+        <summary>HOW DO I GET A TOKEN?</summary>
+        <ol>
+          <li>Go to <b>github.com/settings/tokens</b> and choose <b>Generate new token (classic)</b></li>
+          <li>Leave every scope <b>unchecked</b> (public data needs no scopes)</li>
+          <li>Copy the <code>ghp_…</code> token.</li>
+          <li><b>Safest:</b> paste it into a <code>.env</code> file here as <code>GITHUB_TOKEN=ghp_…</code>, then restart <code>node server.mjs</code>. It never leaves your machine.</li>
+          <li><b>Or:</b> paste it here — it is stored <b>only in your browser</b> (localStorage).</li>
+        </ol>
+      </details>
+    </div>
+  </div>
+
+  <!-- ============ SETTINGS MODAL ============ -->
+  <div class="overlay" id="settings-modal" hidden>
+    <div class="modal">
+      <div class="modal-title">SETTINGS</div>
+      <label class="field">
+        <span>PET NAME</span>
+        <input id="set-name" type="text" maxlength="14" autocomplete="off" />
+      </label>
+      <label class="field">
+        <span>GITHUB USERNAME</span>
+        <input id="set-login" type="text" autocomplete="off" />
+      </label>
+      <label class="field">
+        <span>BROWSER TOKEN <em>(EMPTY = USE .ENV / DEMO)</em></span>
+        <input id="set-token" type="password" placeholder="ghp_..." autocomplete="off" />
+      </label>
+      <div class="modal-row">
+        <button class="btn btn-primary" id="btn-save">SAVE</button>
+        <button class="btn" id="btn-close">CLOSE</button>
+      </div>
+      <p class="modal-text dim" id="settings-status"></p>
+    </div>
+  </div>
+
+  <!-- ============ LEVEL-UP BANNER ============ -->
+  <div class="banner" id="banner" hidden>
+    <div class="banner-inner">
+      <div class="banner-title">LEVEL UP!</div>
+      <div class="banner-sub" id="banner-sub">LEVEL 3 · BABY</div>
+    </div>
+  </div>
+
+  <script src="github.js"></script>
+  <script src="dragon.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

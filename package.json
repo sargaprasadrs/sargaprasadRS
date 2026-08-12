@@ -1,0 +1,14 @@
+{
+  "name": "github-profile-pet",
+  "version": "1.0.0",
+  "description": "A retro pixel dragon Tamagotchi powered by the GitHub GraphQL API. Lives on your GitHub profile.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.mjs",
+    "pet": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=20.6"
+  }
+}
